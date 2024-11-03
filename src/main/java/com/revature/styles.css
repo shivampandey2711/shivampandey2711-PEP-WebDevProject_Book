@@ -1,5 +1,4 @@
-/* Below are styles that are optional to use. You can choose to incorporate your own CSS styles. */
-
+/* Basic Styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -7,47 +6,177 @@ body {
     padding: 0;
 }
 
+/* Header and Footer */
 header, footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 1rem;
+    margin-bottom: 1rem;
 }
 
+/* Main Content Area */
 main {
     padding: 2rem;
+    max-width: 800px;
+    margin: auto;
 }
 
+/* Search Form */
 #search-form {
+    display: flex;
     gap: 1rem;
     margin-bottom: 1rem;
+    align-items: center;
 }
 
+#search-input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
 
+#search-button {
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #555;
+}
+
+/* Filter and Sort Section */
 #filter-sort {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 1rem;
 }
 
+#ebook-filter {
+    margin-right: 0.5rem;
+}
+
+#sort-rating {
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#sort-rating:hover {
+    background-color: #555;
+}
+
+/* Book List Styling */
 #book-list {
     list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
 }
 
 .book-item {
     border: 1px solid #ddd;
     padding: 1rem;
     border-radius: 5px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.book-item:hover {
+    transform: scale(1.05);
 }
 
 .book-item img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+/* Selected Book Section */
+#selected-book {
+    border: 2px solid #333;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#selected-book .book-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+#selected-book img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+#selected-book p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+
+#book-list li {
+    list-style-type: none;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#book-list li:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#book-list li img {
     max-width: 100%;
     height: auto;
-}
-
-#selected-book {
-    border: 1px solid #ddd;
-    padding: 1rem;
     border-radius: 5px;
-    margin-top: 1rem;
+    margin-bottom: 0.5rem;
 }
 
+#book-list li .book-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+#book-list li .book-author, 
+#book-list li .book-year, 
+#book-list li .book-isbn {
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+    margin: 0.3rem 0;
+}
+
+#book-list li .book-rating {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}

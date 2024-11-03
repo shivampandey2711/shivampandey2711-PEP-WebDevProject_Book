@@ -7,8 +7,51 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
-    
+    <header>
+        <h1>Book Finder</h1>
+    </header>
+
+    <!-- Search Form -->
+    <section>
+        <form id="search-form">
+            <input type="text" id="search-input" placeholder="Enter search term..." required>
+            <select id="search-type">
+                <option value="title">Title</option>
+                <option value="isbn">ISBN</option>
+                <option value="author">Author</option>
+            </select>
+            <button type="submit" id="search-button">Search</button>
+        </form>
+
+        <!-- Filters and Sorting -->
+        <div>
+            <label>
+                <input type="checkbox" id="ebook-filter">
+                Show only e-books
+            </label>
+            <button id="sort-rating">Sort by Rating</button>
+        </div>
+    </section>
+
+    <!-- Book List Display -->
+    <section>
+        <ul id="book-list">
+            <!-- List of books will be dynamically populated here -->
+        </ul>
+    </section>
+
+    <!-- Selected Book Display -->
+    <section id="selected-book" style="display: none;">
+        <!-- This section will be populated dynamically with detailed book information -->
+        <h2 class="book-title"></h2>
+        <p class="book-author"></p>
+        <p class="book-year"></p>
+        <img class="book-cover" alt="Book Cover">
+        <p class="book-isbn"></p>
+        <p class="book-ebook-access"></p>
+        <p class="book-rating"></p>
+    </section>
+
     <script src="script.js"></script>
 </body>
 </html>
